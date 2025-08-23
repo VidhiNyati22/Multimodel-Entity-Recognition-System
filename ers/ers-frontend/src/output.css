@@ -1,0 +1,202 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  font-family: Arial, sans-serif;
+  background-color: #f1f1f5;
+  overflow: hidden;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+  animation: logo-spin infinite 5s linear;
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.company-name {
+  font-weight: 200;
+  font-size: 20px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #f8f7af;
+  border-bottom: 1px solid #9c7272;
+}
+
+.content {
+  display: flex;
+  flex: 1;
+  padding: 20px;
+  gap: 20px;
+}
+
+.output-box {
+  flex: 3;
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  height: 500px;
+  overflow-y: auto;
+  font-family: Arial, sans-serif; 
+  font-size: 16px;
+  line-height: 1.6;
+  margin-right: 20px;
+
+
+}
+
+.entity-list {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  background-color: #ebeadf;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.entity-list-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+h3, h2 {
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+li:hover {
+  background-color: #e0e0e0; 
+}
+
+.dot {
+  display: inline-block;
+  width: 12px;
+  height: 10px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.text-output {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  flex-grow: 1;
+  overflow-y: auto;
+}
+
+.highlight {
+  padding: 3px 5px;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.highlight.B-Disease { background-color: #87cefa; }
+.highlight.I-Disease { background-color: #457ea1ea; }
+.highlight.B-Chemical { background-color: #dbba7c; }
+.highlight.I-Chemical { background-color: #ffa500; }
+.highlight.DRUG { background-color: #90ee90; }
+.highlight.Keyphrase { background-color: #ff69b4; }
+.highlight.PERSON { background-color: #ffd700; }
+.highlight.ORGANIZATION { background-color: #ff4500; }
+.highlight.LOCATION { background-color: #1e90ff; }
+.highlight.ADVERSE EFFECT { background-color: #8f5d548f; }
+.highlight.LABEL_1 { background-color: #d3d3d3; }
+.highlight.LABEL_0 { background-color: #cea8a8; }
+.highlight.Miscellaneous { background-color: #927878; }
+
+.dot.B-Disease { background-color: #87cefa; }
+.dot.I-Disease { background-color: #457ea1ea; }
+.dot.B-Chemical { background-color: #dbba7c; }
+.dot.I-Chemical { background-color: #ffa500; }
+.dot.DRUG { background-color: #90ee90; }
+.dot.Keyphrase { background-color: #ff69b4; }
+.dot.PERSON { background-color: #ffd700; }
+.dot.ORGANIZATION { background-color: #ff4500; }
+.dot.LOCATION { background-color: #1e90ff; }
+.dot.ADVERSE EFFECT { background-color: #8f5d548f; }
+.dot.LABEL_1 { background-color: #d3d3d3; }
+.dot.LABEL_0 { background-color: #cea8a8; }
+.dot.Miscellaneous { background-color: #c5c5c5; }
+
+.back-button {
+  background-color: #449af7; 
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 12px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  transition: background-color 0.3s, transform 0.2s; 
+  align-self: flex-end;
+}
+
+.back-button:hover {
+  background-color: #0056b3; 
+}
+
+.back-button:focus {
+  outline: none; 
+}
+
+
+@media (max-width: 768px) {
+  .content {
+    flex-direction: column;
+  }
+  
+  .output-box, .entity-list {
+    width: 100%;
+  }
+
+  .back-button {
+    width: 100%;
+    padding: 12px;
+    text-align: center; 
+  }
+}
+
